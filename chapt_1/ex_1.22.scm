@@ -37,7 +37,6 @@
 (find-consecutive-primes 1000000 3 0)
 (newline)
 
-
 ; note: SICP 2nd Edition requests that the time to process each prime be noted.
 ; When the book was published circa 1996 the time required to test primes < 1M
 ; was probably significant. Running this example in 2024 on a 2.3 GHz MacBook Pro
