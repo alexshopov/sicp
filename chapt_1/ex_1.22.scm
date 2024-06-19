@@ -11,13 +11,13 @@
     (define (start-prime-test n start-time)
         (cond ((prime? n)
                   (report-prime n (- (runtime) start-time))
-                   #t)
-              (else #f)))
+                   true)
+              (else false)))
 
     (start-prime-test n (runtime)))
 
 
-; test the primes starting from a until a number of matches have been found
+; test the primes starting from a given number until n primes have been found
 (define (find-consecutive-primes start matches count)
     (if (= matches count)
         0       
@@ -38,8 +38,8 @@
 (newline)
 
 ; note: SICP 2nd Edition requests that the time to process each prime be noted.
-; When the book was published circa 1996 the time required to test primes < 1M
+; When the book was published circa 1996 the time required to test primes >1M
 ; was probably significant. Running this example in 2024 on a 2.3 GHz MacBook Pro
-; the time to process primes was effectively < .01 seconds, and I had to run the
-; test routine against primes > 1B to see any actual duration reported.
+; the time to process primes was effectively < .01 seconds. I had to run the
+; test routine against primes >1B to see any actual duration reported.
 (find-consecutive-primes 1000000000 3 0)

@@ -11,8 +11,8 @@ Working through Chapter 1 has shown that there are some gaps in my math backgrou
 SICP 2nd Edition requests that the time to process each prime be noted.  When the
 book was published circa 1996 the time required to test primes >1M was probably
 significant. Running this example in 2024 on a 2.3 GHz MacBook Pro the time to
-process primes was effectively < .01 seconds, and I had to run the test routine
-against primes > 1B to see any actual duration reported.
+process primes was effectively < .01 seconds. I had to run the test routine
+against primes >1B to see any actual duration reported.
 
 ### Added
 
