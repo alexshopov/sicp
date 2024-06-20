@@ -2,7 +2,9 @@
 Working my way through [Structure and Interpretation of Computer Programs](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html)
 using [mit-scheme](https://www.gnu.org/software/mit-scheme/) v12.1.
 
-### Notes
+## Notes
+
+### Chapter 1
 
 Working through Chapter 1 has shown that there are some gaps in my math background.
 
