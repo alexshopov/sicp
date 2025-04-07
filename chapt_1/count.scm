@@ -1,15 +1,21 @@
-(load "utils/io.scm")
+#lang sicp 
+
+; experimenting with recursive counters
+
+(define (++ x) (+ x 1))
+(define (-- x) (- x 1))
 
 (define (countdown x y)
-    (println x)
+    (display x) (newline)
     (if (> x y)
-        (countdown (-1+ x) y)))
+        (countdown (-- x) y)))
+        
 
 (define (count x y)
-    (println x)
+    (display x) (newline)
     (if (< x y)
-        (count (1+ x) y)))
+        (count (++ x) y)))
 
-(count 0 10)
+(count 0 5)
 (newline)
 (countdown 10 5)

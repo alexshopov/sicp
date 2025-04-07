@@ -1,4 +1,4 @@
-(load "utils/io.scm")
+#lang sicp
 
 ; tree-recursive implementation
 (define (fib-tree n)
@@ -7,7 +7,7 @@
           (else (+ (fib-tree (- n 1)) (fib-tree (- n 2))))))
 
 ; expect 55
-(println (fib-tree 10))
+(display (fib-tree 10)) (newline)
 
 ; iterative implementation
 ; use the parameter list of the fib-iter function as a means for changing state
@@ -17,4 +17,4 @@
         (fib-iter (+ a b) a (- n 1))))
 
 ; expect 55
-(println (fib-iter 1 0 10))
+(display (fib-iter 1 0 10)) (newline)

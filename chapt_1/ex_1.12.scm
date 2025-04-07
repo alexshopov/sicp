@@ -1,10 +1,15 @@
+#lang sicp
+
+(define (++ x) (+ x 1))
+(define (-- x) (- x 1))
+
 ; Pascal's triangle
 (define (pascals-triangle n)
     ; return the entry for a given row and column
     (define (pascal-entry row col)
         (cond ((or (= row 1) (= col 1) (= row col)) 1)
-              (else (+ (pascal-entry (-1+ row) (-1+ col))
-                       (pascal-entry (-1+ row) col)))))
+              (else (+ (pascal-entry (-- row) (-- col))
+                       (pascal-entry (-- row) col)))))
 
     ; print a row of entries
     (define (print-row row)
@@ -12,14 +17,14 @@
             (display (pascal-entry row col)) (display " ")
             (if (= col row)
                 (newline)
-                (pascal-column (1+ col))))
+                (pascal-column (++ col))))
         (pascal-column 1))
 
     (define (build-triangle row)
         (print-row row)
         (if (= row n)
             (newline)
-            (build-triangle (1+ row))))
+            (build-triangle (++ row))))
 
     (build-triangle 1)
 )

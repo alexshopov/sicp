@@ -1,4 +1,4 @@
-(load "utils/io.scm")
+#lang sicp
 
 ; common template used for these procedures
 ; (define (<name> a b)
@@ -21,10 +21,11 @@
     (sum identity a inc b))
 
 ; expect 55
-(println (sum-integers 1 10))
+(display (sum-integers 1 10)) (newline)
 
 (define (sum-cubes a b)
+    (define (cube x) (* x x x))
     (sum cube a inc b))
 
 ; expect 3025
-(println (sum-cubes 1 10))
+(display (sum-cubes 1 10))

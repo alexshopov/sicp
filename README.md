@@ -1,6 +1,6 @@
 # sicp
 Working my way through [Structure and Interpretation of Computer Programs](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html)
-using [mit-scheme](https://www.gnu.org/software/mit-scheme/) v12.1.
+using [racket](https://racket-lang.org/) v8.15.
 
 ## Notes
 

@@ -13,7 +13,8 @@
     (define (accum a result)
         (if (> a b)
             result
-            (accum (next a) (combiner (term a) result))))
+            (accum (next a)
+                   (combiner (term a) result))))
     (accum a null-value))
 
 

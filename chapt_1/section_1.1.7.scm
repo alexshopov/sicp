@@ -1,4 +1,4 @@
-(load "utils/io.scm")
+#lang sicp
 
 ; calculate square roots using the sqrt method developed by Heron of Alexandria
 ; circa first century ACE
@@ -24,10 +24,10 @@
 )
 
 ; expect ~1.414...
-(println (heron-sqrt 2.0))
+(display (heron-sqrt 2.0))
 
 ; expect ~1.732...
-(println (heron-sqrt 3.0))
+(display (heron-sqrt 3.0))
 
 ; expect ~2.000...
-(println (heron-sqrt 4.0))
+(display (heron-sqrt 4.0))

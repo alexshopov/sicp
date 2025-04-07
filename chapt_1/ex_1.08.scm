@@ -1,4 +1,4 @@
-(load "utils/io.scm")
+#lang sicp 
 
 ; exercise 1.8
 ; Newton's method for cube roots using the approximation formula
@@ -23,18 +23,18 @@
 )
 
 ; expect ~1.0000...
-(println (cbrt 1.0))
+(display (cbrt 1.0))
 
 ; expect ~1.2599...
-(println (cbrt 2.0))
+(display (cbrt 2.0))
 
 ; expect ~1.4422...
-(println (cbrt 3.0))
+(display (cbrt 3.0))
 
 ; expect ~1.5874...
-(println (cbrt 4.0))
+(display (cbrt 4.0))
 
 ; expect ~2.0000...
-(println (cbrt 8.0))
+(display (cbrt 8.0))
 
 

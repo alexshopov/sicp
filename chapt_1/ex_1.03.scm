@@ -1,4 +1,4 @@
-(load "utils/io.scm")
+#lang sicp
 
 ; exercise 1.3
 ; define a procedure that takes three numbers and returns the
@@ -12,15 +12,15 @@
           (else (sum-squares a b))))
 
 ; should return 2
-(println (f 1 1 1))
+(display (f 1 1 1))
 
 ; should return 5
-(println (f 1 1 2))
+(display (f 1 1 2))
 
 ; should return 8
-(println (f 2 1 2))
+(display (f 2 1 2))
 
 ; should return 13
-(println (f 1 2 3))
-(println (f 1 3 2))
-(println (f 3 1 2))
+(display (f 1 2 3))
+(display (f 1 3 2))
+(display (f 3 1 2))

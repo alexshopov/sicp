@@ -1,4 +1,6 @@
-(load "utils/io.scm")
+#lang sicp
+
+(define (square x) (* x x))
 
 ; find the smallest divisor of the given numbers
 (define (smallest-divisor n)
@@ -13,10 +15,10 @@
     (find-divisor n 2))
 
 ; prime
-(println (smallest-divisor 199))
+(display (smallest-divisor 199))
 
 ; prime
-(println (smallest-divisor 1999))
+(display (smallest-divisor 1999))
 
 ; not prime
-(println (smallest-divisor 19999))
+(display (smallest-divisor 19999))

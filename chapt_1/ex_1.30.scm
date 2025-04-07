@@ -1,4 +1,4 @@
-(load "utils/io.scm")
+#lang sicp
 
 ; iterative version of sum
 (define (sum term a next b)
@@ -17,4 +17,4 @@
     (sum identity a inc b))
 
 ; expect 55
-(println (sum-integers 1 10))
+(display (sum-integers 1 10))
