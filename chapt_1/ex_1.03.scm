@@ -4,12 +4,13 @@
 ; define a procedure that takes three numbers and returns the
 ; sum of squares of the two larger numbers
 (define (f a b c)
-    (define (sum-squares x y)
-        (+ (* x x) (* y y)))
+  (define (sum-squares x y)
+    (+ (* x x) (* y y)))
 
-    (cond ((and (<= a b) (<= a c)) (sum-squares b c))
-          ((and (<= b a) (<= b c)) (sum-squares a c))
-          (else (sum-squares a b))))
+  (cond 
+    [(and (<= a b) (<= a c)) (sum-squares b c)]
+    [(and (<= b a) (<= b c)) (sum-squares a c)]
+    [else (sum-squares a b)]))
 
 ; should return 2
 (display (f 1 1 1))

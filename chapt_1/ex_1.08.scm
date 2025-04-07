@@ -3,24 +3,23 @@
 ; exercise 1.8
 ; Newton's method for cube roots using the approximation formula
 (define (cbrt x)
-    (define tolerance .00001)
+  (define tolerance .00001)
 
-    (define (cube-approximation y)
-        (/ (+ (/ x (* y y)) (* 2 y)) 3))
+  (define (cube-approximation y)
+    (/ (+ (/ x (* y y)) (* 2 y)) 3))
     
-    (define (improve y)
-        (cube-approximation y))
+  (define (improve y)
+    (cube-approximation y))
 
-    (define (good-enough? y)
-        (< (abs (- (* y y y) x)) tolerance))
+  (define (good-enough? y)
+    (< (abs (- (* y y y) x)) tolerance))
 
-    (define (try y)
-        (if (good-enough? y)
-                y
-                (try (improve y))))
+  (define (try y)
+    (if (good-enough? y)
+        y
+        (try (improve y))))
 
-    (try 1)
-)
+  (try 1))
 
 ; expect ~1.0000...
 (display (cbrt 1.0))

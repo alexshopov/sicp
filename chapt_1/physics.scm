@@ -1,11 +1,8 @@
 #lang sicp
 
 ; kinematic position function
-(define position
-    (lambda (a v u t)
-    (+ u
-       (* v t)
-       (* .5 a (* t t)))))
+(define position (lambda (a v u t)
+  (+ u (* v t) (* .5 a (* t t)))))
 
 (display (position 0 0 0 0))
 (display (position 0 0 20 0))

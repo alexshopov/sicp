@@ -4,24 +4,23 @@
 ; circa first century ACE
 
 (define (heron-sqrt x)
-    (define tolerance .00001)
+  (define tolerance 0.00001)
 
-    (define (average x y)
-        (/ (+ x y) 2))
+  (define (average x y)
+    (/ (+ x y) 2))
 
-    (define (improve y)
-        (average y (/ x y)))
+  (define (improve y)
+    (average y (/ x y)))
 
-    (define (good-enough? y)
-        (< (abs (- (* y y) x)) tolerance))
+  (define (good-enough? y)
+    (< (abs (- (* y y) x)) tolerance))
 
-    (define (try y)
-        (if (good-enough? y)
-                y
-                (try (improve y))))
+  (define (try y)
+    (if (good-enough? y)
+        y
+        (try (improve y))))
 
-    (try 1)
-)
+  (try 1))
 
 ; expect ~1.414...
 (display (heron-sqrt 2.0))

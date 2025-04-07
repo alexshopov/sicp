@@ -8,13 +8,12 @@
             (iter (next a) (+ (term a) result))))
     (iter a 0))
 
-(define (inc n)
-    (+ n 1))
-
-(define (identity a) a)
-
+; use lambdas to create an identity and incrementer function
 (define (sum-integers a b)
-    (sum identity a inc b))
+    (sum (lambda (x) x)
+         a
+         (lambda (x) (+ x 1))
+         b))
 
 ; expect 55
 (display (sum-integers 1 10))
